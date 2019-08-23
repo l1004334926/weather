@@ -23,11 +23,11 @@ public class SendEmail
     public static void main(String [] args)
     {
         SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");//设置日期格式
-        // 收件人电子邮箱邮件发给王益庆<wangyq@yuanian.com>，抄送邱光成<qiugch@yuanian.com>，王明辉<wangmh@yuanian.com>
-        String to = "liuch@yuanian.com";
+        // 收件人电子邮箱
+        String to = "xx@QQ.com";
 
         // 发件人电子邮箱
-        String from = "1004334926@qq.com";
+        String from = "xxxxxx@qq.com";
 
         // 指定发送邮件的主机为 smtp.qq.com
         String host = "smtp.qq.com";  //QQ 邮件服务器
@@ -43,7 +43,7 @@ public class SendEmail
         Session session = Session.getDefaultInstance(properties,new Authenticator(){
             public PasswordAuthentication getPasswordAuthentication()
             {
-                return new PasswordAuthentication("1004334926@qq.com", "sivwwkurmmjebfdi"); //发件人邮件用户名、授权码
+                return new PasswordAuthentication("xxxxxx@qq.com", "xxxxxxxxxxx"); //发件人邮件用户名、授权码
             }
         });
 
@@ -59,7 +59,7 @@ public class SendEmail
                     new InternetAddress(to));
 
             // Set Subject: 头部头字段
-            message.setSubject("春蕾学员培训-天气预报  刘翀  "+df.format(new Date()));// new Date()为获取当前系统时间
+            message.setSubject("xxxxxxxxx"+df.format(new Date()));// new Date()为获取当前系统时间
 
             // 设置消息体
             String cityCode = "101200101";
